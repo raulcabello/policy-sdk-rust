@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use crate::host_capabilities::verification::VerificationConfigV1;
 
 pub mod verification;
 
@@ -19,6 +20,6 @@ pub enum CallbackRequestType {
         /// String pointing to the object (e.g.: `registry.testing.lan/busybox:1.0.0`)
         image: String,
         /// The configuration to use at verification time
-        config: verification::Config,
+        config: VerificationConfigV1,
     },
 }
